@@ -15,7 +15,7 @@ export async function readPosts() {
   const { data, error } = await supabase
     .from("Underside-panel")
     .select("*")
-    .order("created_at", { ascending: false });
+    .order("created_at");
 
   if (error) {
     console.error("Ошибка чтения:", error);
