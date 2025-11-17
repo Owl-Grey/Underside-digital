@@ -24,6 +24,5 @@ export async function readPosts() {
 
   console.log("Записи получены:", data);
   return data;
-  console.log('test')
 }
 

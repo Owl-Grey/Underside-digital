@@ -1,36 +1,159 @@
-<!doctype html>
-<html lang="ru">
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8" />
   <title>Underside Entertainment</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Underside Entertainment — stories from the depths: Underside TRPG, Underside: The Lift, Devastated Lands, Life-net."
+  />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main class="card">
-    <div class="logo">Underside</div>
-    <div class="subtitle">Entertainment</div>
-    <div class="divider"></div>
+    <div class="bg-blobs">
+      <div class="blob blob-green"></div>
+      <div class="blob blob-purple"></div>
+      <div class="blob blob-green-small"></div>
+    </div>
+    <div class="page">
 
-    <p class="text">
-      Здесь будет дом вселенной <strong>Underside</strong>:<br>
-      <span class="games">Underside: The Lift, Devastated Lands</span> и другие истории из изнанки.
-    </p>
+  <div class="page">
+    <header class="site-header">
+      <div class="logo-wrap">
+        <img src="underside-logo.jpg" alt="Underside Entertainment logo" class="logo-img" />
+      </div>
 
-    <p class="hint">
-      Это временная заглушка. Если вы видите эту страницу, домен
-      <strong>underside.digital</strong> уже работает.
-    </p>
-  </main>
+      <div class="header-main">
+        <div class="title-block">
+          <h1 class="title" data-i18n="title"></h1>
+          <p class="tagline" data-i18n="tagline"></p>
+        </div>
 
-  <script src="script.js" defer></script>
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script type="module">
-  import { readPosts } from "./supabase-test.js";
+        <div class="lang-switch">
+          <button class="lang-btn active" data-lang-target="en">EN</button>
+          <button class="lang-btn" data-lang-target="ru">RU</button>
+        </div>
+      </div>
+    </header>
 
-  // вызов функции
-  readPosts();
-</script>
+    <main class="content">
+      <section class="intro">
+        <p class="intro-text" data-i18n="intro_main"></p>
+      </section>
+
+      <!-- БЛОК С ВИДЕО ПЕРЕД ПРОЕКТАМИ -->
+      <section class="video">
+        <h2 class="section-title" data-i18n="video_title"></h2>
+        <p class="video-text" data-i18n="video_desc"></p>
+
+        <div class="video-frame">
+          <!-- Положи сюда свой mp4: media/underside-trailer.mp4 -->
+          <video
+            class="video-element"
+            controls
+            preload="metadata"
+            poster="media/underside-poster.jpeg"
+          >
+            <source src="media/underside-trailer.mp4" type="video/mp4" />
+            <p data-i18n="video_fallback"></p>
+          </video>
+        </div>
+
+        <p class="video-note" data-i18n="video_note"></p>
+      </section>
+
+      <section class="projects">
+        <h2 class="section-title" data-i18n="projects_title"></h2>
+
+        <div class="projects-grid">
+          <!-- 1. TRPG -->
+          <article class="project-card">
+            <div class="project-glow"></div>
+            <div class="project-inner">
+              <div class="project-thumb">
+                <!-- сюда положишь свой постер -->
+                <img src="img/trpg-poster.png" alt="Underside / Изнанка TRPG poster" />
+              </div>
+              <div class="project-body">
+                <span class="project-label" data-i18n="trpg_label"></span>
+                <h3 class="project-title" data-i18n="trpg_title"></h3>
+                <p class="project-desc" data-i18n="trpg_desc"></p>
+                <span class="project-tag" data-i18n="trpg_tag"></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. The Lift -->
+          <article class="project-card">
+            <div class="project-glow"></div>
+            <div class="project-inner">
+              <div class="project-thumb">
+                <img src="img/lift-poster.png" alt="Underside: The Lift poster" />
+              </div>
+              <div class="project-body">
+                <span class="project-label" data-i18n="lift_label"></span>
+                <h3 class="project-title" data-i18n="lift_title"></h3>
+                <p class="project-desc" data-i18n="lift_desc"></p>
+                <span class="project-tag" data-i18n="lift_tag"></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. Devastated Lands -->
+          <article class="project-card">
+            <div class="project-glow"></div>
+            <div class="project-inner">
+              <div class="project-thumb">
+                <img src="img/devastated-poster.png" alt="Devastated Lands poster" />
+              </div>
+              <div class="project-body">
+                <span class="project-label" data-i18n="dl_label"></span>
+                <h3 class="project-title" data-i18n="dl_title"></h3>
+                <p class="project-desc" data-i18n="dl_desc"></p>
+                <span class="project-tag" data-i18n="dl_tag"></span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. Life-net -->
+          <article class="project-card">
+            <div class="project-glow"></div>
+            <div class="project-inner">
+              <div class="project-thumb">
+                <img src="img/lifenet-poster.png" alt="Life-net project poster" />
+              </div>
+              <div class="project-body">
+                <span class="project-label" data-i18n="ln_label"></span>
+                <h3 class="project-title" data-i18n="ln_title"></h3>
+                <p class="project-desc" data-i18n="ln_desc"></p>
+                <span class="project-tag" data-i18n="ln_tag"></span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="about">
+        <h2 class="section-title" data-i18n="about_title"></h2>
+        <p class="about-text" data-i18n="about_text"></p>
+      </section>
+
+      <section class="contacts">
+        <h2 class="section-title" data-i18n="contact_title"></h2>
+        <p class="contact-text" data-i18n="contact_text"></p>
+        <p class="contact-email">
+          <span data-i18n="contact_email_label"></span>
+          <a href="mailto:contact@underside.digital">contact@underside.digital</a>
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span class="footer-text" data-i18n="footer_text"></span>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
